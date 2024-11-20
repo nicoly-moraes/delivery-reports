@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="delivery.reports.ReportController">
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 10;">
+            <Button onAction="#onBackButtonClick" text="← Voltar" />
+            <Label fx:id="restaurantTitle" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Título do Restaurante" />
+        </HBox>
+    </top>
+    <center>
+        <TableView fx:id="reportTableView" prefHeight="400.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="itemColumn" prefWidth="219.0" text="Item" />
+                <TableColumn fx:id="valueColumn" prefWidth="113.79998779296875" text="Valor" />
+                <TableColumn fx:id="clientColumn" prefWidth="267.0" text="Cliente" />
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
