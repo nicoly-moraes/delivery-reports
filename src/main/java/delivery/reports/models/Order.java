@@ -1,4 +1,4 @@
-package delivery.reports;
+package delivery.reports.models;
 
 public class Order {
     private final String item;

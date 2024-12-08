@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports
+              http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="order-report" pageWidth="595" pageHeight="842" columnWidth="515"
+              leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+
+    <field name="item" class="java.lang.String"/>
+    <field name="value" class="java.lang.Double"/>
+    <field name="client" class="java.lang.String"/>
+
+    <!-- Title Section -->
+    <title>
+        <band height="50" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="0" width="515" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="18" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Relatório de Pedidos]]></text>
+            </staticText>
+        </band>
+    </title>
+
+    <!-- Column Header Section -->
+    <columnHeader>
+        <band height="30">
+            <staticText>
+                <reportElement x="0" y="0" width="170" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Item]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="170" y="0" width="170" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Valor]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="340" y="0" width="175" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Cliente]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+
+    <!-- Data Section (Table with Bordered Rows) -->
+    <detail>
+        <band height="30">
+            <textField>
+                <reportElement x="0" y="0" width="170" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{item}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="170" y="0" width="170" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{value}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="340" y="0" width="175" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{client}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+</jasperReport>

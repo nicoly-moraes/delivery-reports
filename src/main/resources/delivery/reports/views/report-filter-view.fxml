@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 
 <VBox xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="delivery.reports.ReportFilterController" spacing="10" alignment="CENTER" prefHeight="400.0" prefWidth="600.0">
+      fx:controller="delivery.reports.controllers.ReportFilterController" spacing="10" alignment="CENTER" prefHeight="400.0" prefWidth="600.0">
 
     <ComboBox fx:id="restaurantComboBox" promptText="Selecione um Restaurante" />
     <DatePicker fx:id="startDatePicker" promptText="Data Inicial" />
