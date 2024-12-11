@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="delivery.reports.controllers.ReportFilterStatusController" spacing="10" alignment="CENTER" prefHeight="400.0" prefWidth="600.0">
+
+    <ComboBox fx:id="statusComboBox" promptText="Selecione um Status" />
+    <DatePicker fx:id="startDatePicker" promptText="Data Inicial" />
+    <DatePicker fx:id="endDatePicker" promptText="Data Final" />
+    <Button text="Gerar Relatório" onAction="#onGenerateReportClick" />
+</VBox>
