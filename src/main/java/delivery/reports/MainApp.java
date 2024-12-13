@@ -6,19 +6,11 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class MainApp extends Application {
-//    @Override
-//    public void start(Stage primaryStage) throws Exception {
-//        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/delivery/reports/views/report-filter-view.fxml"));
-//        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-//        primaryStage.setTitle("Relatórios de Pedidos");
-//        primaryStage.setScene(scene);
-//        primaryStage.show();
-//    }
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/delivery/reports/views/report-filter-staus.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/delivery/reports/views/report-filter-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-        primaryStage.setTitle("Relatórios de Pedidos com Status");
+        primaryStage.setTitle("Relatórios de Pedidos");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

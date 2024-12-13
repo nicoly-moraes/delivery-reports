@@ -33,8 +33,8 @@ public class OrderDAO {
                             public.customers c ON o.customer_id = c.id
                         WHERE\s
                             o.restaurant_id = %d
-                                AND o.created_at >= '%s'
-                                AND o.created_at <= '%s'
+                                AND o.created_at >= '%s 00:00:00'
+                                AND o.created_at <= '%s 23:59:59'
                         GROUP BY\s
                             oi.order_id, oi.product_id, p.name, c.name
                         ORDER BY\s
@@ -81,8 +81,8 @@ public class OrderDAO {
                             public.customers c ON o.customer_id = c.id
                         WHERE\s
                             o.status = '%s'
-                                AND o.created_at >= '%s'
-                                AND o.created_at <= '%s'
+                                AND o.created_at >= '%s 00:00:00'
+                                AND o.created_at <= '%s 23:59:59'
                         GROUP BY\s
                             oi.order_id, oi.product_id, p.name, c.name, r.name, o.status
                         ORDER BY\s

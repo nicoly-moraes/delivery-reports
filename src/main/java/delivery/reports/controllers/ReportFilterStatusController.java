@@ -2,11 +2,17 @@ package delivery.reports.controllers;
 
 import delivery.reports.dao.OrderDAO;
 import delivery.reports.models.Order;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DateCell;
 import javafx.scene.control.DatePicker;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperFillManager;
@@ -16,6 +22,7 @@ import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.swing.JRViewer;
 
 import javax.swing.*;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -70,6 +77,24 @@ public class ReportFilterStatusController {
             }
         });
     }
+    @FXML
+    private void onToRestaurantReport(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/delivery/reports/views/report-filter-view.fxml"));
+            Parent root = loader.load();
+            ReportFilterController controller = loader.getController();
+
+            Scene scene = new Scene(root);
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     @FXML
     private void onGenerateReportClick() {

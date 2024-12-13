@@ -4,22 +4,19 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="10" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="delivery.reports.controllers.ReportFilterController">
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="10" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="delivery.reports.controllers.ReportFilterStatusController">
    <VBox prefHeight="42.0" prefWidth="600.0">
       <children>
-         <Button fx:id="btnStatusReport" mnemonicParsing="false" onAction="#onToStatusReport" text="Relatório Status">
-            <VBox.margin>
-               <Insets />
-            </VBox.margin></Button>
+         <Button fx:id="btnRestaurant" mnemonicParsing="false" onAction="#onToRestaurantReport" text="Relátorio Restaurante" />
       </children>
       <padding>
          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
       </padding>
    </VBox>
-   <VBox alignment="TOP_CENTER" prefHeight="349.0" prefWidth="600.0" spacing="10.0">
+   <VBox alignment="TOP_CENTER" prefHeight="337.0" prefWidth="600.0" spacing="10.0">
       <children>
       
-          <ComboBox fx:id="restaurantComboBox" prefHeight="26.0" prefWidth="178.0" promptText="Selecione um Restaurante" />
+          <ComboBox fx:id="statusComboBox" prefHeight="26.0" prefWidth="178.0" promptText="Selecione um Status" />
           <DatePicker fx:id="startDatePicker" prefHeight="26.0" prefWidth="178.0" promptText="Data Inicial" />
           <DatePicker fx:id="endDatePicker" prefHeight="26.0" prefWidth="178.0" promptText="Data Final" />
           <Button onAction="#onGenerateReportClick" prefHeight="26.0" prefWidth="178.0" text="Gerar Relatório" />
